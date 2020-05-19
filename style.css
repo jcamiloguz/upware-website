@@ -271,7 +271,7 @@ header > video {
 }
 #interviews {
   width: 90%;
-  margin: auto;
+  margin: 40px auto;
 }
 #interviews > div {
   display: flex;
@@ -337,10 +337,11 @@ header > video {
   margin: 50px auto;
 }
 #extras {
-  height: 30vh;
+  height: 40vh;
   display: flex;
   flex-flow: row nowrap;
   width: 90%;
+  margin: 40px auto;
 }
 #sac {
   width: 50%;
@@ -348,8 +349,157 @@ header > video {
 #pse {
   width: 50%;
   background-color: var(--color1);
+  height: 100%;
+  border-radius: 15px;
+  margin: 0 0 0 20px;
 }
-#pse img {
+#pse figure {
+  width: 45%;
+  margin:  30% auto ;
+  text-align: center;
+  transform: translateY(-50%);
+  height: 60%;  
+  
+}
+#pse figure img{
+width: 100%;
+}
+.ingresar{
+  background-color: white;
+  border-radius: 12px;
+  padding: 6px 30px;
+  margin-top: 50px;
+  
+}
+.ingresar a{
+  color: var(--color1);
+  font-size: 1.8em;
+  font-weight: 600;
+}
+#sac{
+  width: 50%;
+  height: 100%;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  margin: 0 20px  0 0;
+}
+#sac > img{
+  width: 105%;
+  top: -5px;
+  left: -5px;
+  position: absolute;
+  z-index: -1;
+  filter: blur(4px) brightness(50%);
+  
+}
+#sac figure {
+  color: white;
+  width: 50%;
+  height: 60%;
+  margin:  33% auto ;
+  text-align: center;
+  transform: translateY(-50%);
+
+}
+#sac figure h1{
+  font-size: 3em;
+}
+#info{
+  height: 40vh;
+  display: flex;
+  flex-flow: row nowrap;
+  width: 90%;
+  margin: 40px auto;
+  background-color: var(--color1);
+  border-radius: 15px;
+  overflow: hidden;
+}
+#map{
   width: 60%;
-  margin: auto;
+  background-color: white;
 }
+#contact{
+  width: 40%;
+}
+#data{
+  width: 70%;
+  color: white;
+  text-align: center;
+  margin: auto;
+  margin-top: 7%;
+}
+#data h1{
+  font-weight: 400;
+  font-size: 3em;
+}
+#data p{
+  color: white;
+  font-weight: 300;
+}
+#alliance{
+  background-color: var(--color1);
+  width: 90%;
+  margin: auto;
+  border-radius: 20px;
+  padding: 20px;
+}
+#alliance h1{color: white;
+  font-weight: 600;
+  border-bottom: 2px solid white;
+  width: 25%;
+  margin: auto;
+  text-align: center;
+  font-size: 4em;
+  padding-top: 40px;}
+  #marcas{
+    display: flex;
+  flex-flow: row nowrap;
+  width: 90%;
+  margin: 50px;
+  }
+  #marcas figure{
+    width: 20%;
+    margin: 20px;
+  }#marcas figure img{
+    width: 100%;
+    
+  }
+  footer{
+    margin: 40px 0 100px;
+  }
+  #logoB {
+    width: 25%;
+    margin: auto;
+    
+  }
+  #menu-dark {
+    width: 100%;
+    margin-top: 80px;
+    justify-content: center;
+    display: flex;
+    flex-flow: row nowrap;
+  }
+  #menu-dark a {
+    display: block;
+    padding: 6px 20px;
+    color: var(--color1);
+    font-weight: 400;
+    font-size: 30px;
+  }
+  .navinside {
+    border-left: 3px solid var(--color1);
+    border-right: 3px solid var(--color1);
+  }
+  #navoutside1 {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+  #navoutside2 {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  #menu-dark a:hover {
+    background-color: var(--color1);
+    color: white;
+  }
