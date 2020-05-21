@@ -1,8 +1,11 @@
 :root {
-  --color1: #394673;
-  --color2: #da0032;
-  --color3: #004986;
-  --color4: #77bc21;
+  --color1: rgba(57, 70, 115, 1);
+  --color2: rgba(218, 0, 50, 1);
+  --color3: rgba(0, 73, 134, 1);
+  --color4: rgba(119, 188, 33, 1);
+  --color5: rgba(218, 0, 50, 0.6);
+  --color6: rgba(0, 73, 134, 0.6);
+  --color7: rgba(119, 188, 33, 0.6);
 }
 * {
   padding: 0;
@@ -210,64 +213,107 @@ header > video {
   position: relative;
   overflow: hidden;
 }
-#product1 {
-  border-bottom-left-radius: 4 0px;
+#producti {
+  border-bottom-left-radius: 40px;
 }
-#product4 {
+#productf {
   border-bottom-right-radius: 40px;
+}
+.product > img {
+  position: absolute;
+  width: 250%;
+  left: -500px;
 }
 #product1 > img {
   position: absolute;
   width: 300%;
   left: -500px;
 }
-#product2 > img {
-  position: absolute;
-  width: 250%;
-  left: -500px;
-}
-#product3 > img {
-  position: absolute;
-  width: 250%;
-  left: -450px;
-}
-#product4 > img {
-  position: absolute;
-  width: 250%;
-  left: -500px;
-}
-#product1 > a {
-  position: absolute;
-  bottom: 0;
+.pro {
   width: 100%;
-  height: 25%;
+  position: absolute;
+  height: 100%;
+  padding:35px 40px;
+  transition: top 0.5s cubic-bezier(0.73, 0.41, 0.35, 0.96),
+    background-color 0.5s ease;
+  top: 450px;
+}
+#product2 .pro{
+  padding:25px 40px;
+
+}
+#product3 .pro{
+  padding:40px 40px;
+
+}
+#productf  .pro{
+  padding:25px 40px;
+
+}
+.pro > h4 {
+  color: white;
+  font-weight: 200;
+  font-size: 1.45em;
+  margin-top: 70px;
+  text-align: center;
+}
+.product:hover .pro {
+  top: 0px;
+}
+#producti:hover .pro {
+  background-color: var(--color5);
+}
+.pro .saber a {
+  width: 145px;
+  padding: 5px 15px;
+  background-color: white;
+  border-radius: 10px;
+  margin: 20px auto;
+}
+.pro .saber {
+  margin-top: 50px;
+}
+.productImg{
+  width: 80%;
+  margin: auto;
+}
+
+#producti > div {
   background-color: var(--color2);
 }
-#product2 > a {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 25%;
+#producti:hover .pro {
+  background-color: var(--color5);
+}
+#producti a {
+  color: var(--color2);
+}
+#product2 > div {
   background-color: var(--color3);
 }
-#product3 > a {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 25%;
+#product2:hover .pro {
+  background-color: var(--color6);
+}
+#product2 a {
+  color: var(--color3);
+}
+#product3 > div {
   background-color: black;
 }
-#product4 > a {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 25%;
+#product3:hover .pro {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+#product3 a {
+  color: black;
+}
+#productf > div {
   background-color: var(--color4);
 }
-#desarrollos figure > a > div {
-  width: 70%;
-  margin-top: 25%;
-  margin: 40px auto;
+#productf a {
+  color: var(--color4);
+}
+
+#productf:hover .pro {
+  background-color: var(--color7);
 }
 #interviews {
   width: 90%;
@@ -355,57 +401,53 @@ header > video {
 }
 #pse figure {
   width: 45%;
-  margin:  30% auto ;
+  margin: 25% auto;
   text-align: center;
   transform: translateY(-50%);
-  height: 60%;  
-  
+  height: 60%;
 }
-#pse figure img{
-width: 100%;
+#pse figure img {
+  width: 100%;
 }
-.ingresar{
+.ingresar {
   background-color: white;
   border-radius: 12px;
   padding: 6px 30px;
   margin-top: 50px;
-  
 }
-.ingresar a{
+.ingresar a {
   color: var(--color1);
   font-size: 1.8em;
   font-weight: 600;
 }
-#sac{
+#sac {
   width: 50%;
   height: 100%;
   border-radius: 15px;
   overflow: hidden;
   position: relative;
-  margin: 0 20px  0 0;
+  margin: 0 20px 0 0;
 }
-#sac > img{
+#sac > img {
   width: 105%;
   top: -5px;
   left: -5px;
   position: absolute;
   z-index: -1;
   filter: blur(4px) brightness(50%);
-  
 }
 #sac figure {
   color: white;
   width: 50%;
   height: 60%;
-  margin:  33% auto ;
+  margin: 25% auto;
   text-align: center;
   transform: translateY(-50%);
-
 }
-#sac figure h1{
+#sac figure h1 {
   font-size: 3em;
 }
-#info{
+#info {
   height: 40vh;
   display: flex;
   flex-flow: row nowrap;
@@ -415,91 +457,93 @@ width: 100%;
   border-radius: 15px;
   overflow: hidden;
 }
-#map{
+#map {
   width: 60%;
   background-color: white;
 }
-#contact{
+#contact {
   width: 40%;
 }
-#data{
+#data {
   width: 70%;
   color: white;
   text-align: center;
   margin: auto;
   margin-top: 7%;
 }
-#data h1{
+#data h1 {
   font-weight: 400;
   font-size: 3em;
 }
-#data p{
+#data p {
   color: white;
   font-weight: 300;
+  font-size: 1em;
 }
-#alliance{
+#alliance {
   background-color: var(--color1);
   width: 90%;
   margin: auto;
   border-radius: 20px;
   padding: 20px;
 }
-#alliance h1{color: white;
+#alliance h1 {
+  color: white;
   font-weight: 600;
   border-bottom: 2px solid white;
   width: 25%;
   margin: auto;
   text-align: center;
   font-size: 4em;
-  padding-top: 40px;}
-  #marcas{
-    display: flex;
+  padding-top: 40px;
+}
+#marcas {
+  display: flex;
   flex-flow: row nowrap;
   width: 90%;
   margin: 50px;
-  }
-  #marcas figure{
-    width: 20%;
-    margin: 20px;
-  }#marcas figure img{
-    width: 100%;
-    
-  }
-  footer{
-    margin: 40px 0 100px;
-  }
-  #logoB {
-    width: 25%;
-    margin: auto;
-    
-  }
-  #menu-dark {
-    width: 100%;
-    margin-top: 80px;
-    justify-content: center;
-    display: flex;
-    flex-flow: row nowrap;
-  }
-  #menu-dark a {
-    display: block;
-    padding: 6px 20px;
-    color: var(--color1);
-    font-weight: 400;
-    font-size: 30px;
-  }
-  .navinside {
-    border-left: 3px solid var(--color1);
-    border-right: 3px solid var(--color1);
-  }
-  #navoutside1 {
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-  }
-  #navoutside2 {
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-  }
-  #menu-dark a:hover {
-    background-color: var(--color1);
-    color: white;
-  }
+}
+#marcas figure {
+  width: 20%;
+  margin: 20px;
+}
+#marcas figure img {
+  width: 100%;
+}
+footer {
+  margin: 40px 0 100px;
+}
+#logoB {
+  width: 25%;
+  margin: auto;
+}
+#menu-dark {
+  width: 100%;
+  margin-top: 80px;
+  justify-content: center;
+  display: flex;
+  flex-flow: row nowrap;
+}
+#menu-dark a {
+  display: block;
+  padding: 6px 20px;
+  color: var(--color1);
+  font-weight: 400;
+  font-size: 30px;
+}
+.navinsided {
+  border-left: 3px solid var(--color1);
+  border-right: 3px solid var(--color1);
+}
+#navoutside1 {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+#navoutside2 {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+#menu-dark a:hover {
+  background-color: var(--color1);
+  color: white;
+}
