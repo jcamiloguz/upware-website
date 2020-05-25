@@ -1,5 +1,6 @@
 :root {
   --color1: rgba(57, 70, 115, 1);
+  --color1h: rgb(18, 23, 41);
   --color2: rgba(218, 0, 50, 1);
   --color3: rgba(0, 73, 134, 1);
   --color4: rgba(119, 188, 33, 1);
@@ -14,8 +15,11 @@
   text-decoration: none;
 }
 body {
+  padding: 0;
+  margin: 0;
   background-color: whitesmoke;
   font-family: "Roboto", sans-serif;
+  width:100%; height:100%; margin:0; padding:0;
 }
 p {
   font-size: 1.4em;
@@ -36,28 +40,36 @@ h2 {
   text-align: center;
 }
 header {
-  height: 100vh;
+  height: 112vh;
 }
-header > video {
+#vid{
+  width: 100vw;
+  height: 100vh;
   position: absolute;
   top: 0;
   left: 0;
   z-index: -2;
-  height: 100%;
+  overflow: hidden;
 }
+#vid video{
+position: absolute;
+}
+
 #background {
   position: absolute;
   top: 0;
   left: 0;
   z-index: -1;
   opacity: 0.6;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
+	background: url("img/background.png") center center no-repeat ;
+	background-size: cover;
 }
 #logoW {
   width: 25%;
   margin: auto;
-  margin-top: 10%;
+  margin-top: 12vh ;
 }
 #menu-light {
   width: 100%;
@@ -90,12 +102,12 @@ header > video {
   color: var(--color1);
 }
 #places {
-  width: 90%;
-  height: 30%;
+  width: 80%;
+  height: 250px;
   margin-left: 50%;
   transform: translateX(-50%);
   position: absolute;
-  top: 85vh;
+  top: 80vh;
   justify-content: center;
   display: flex;
   flex-flow: row nowrap;
@@ -104,7 +116,7 @@ header > video {
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
   width: 20%;
-  height: 100%;
+  height: 250px;
   margin: 0 10px;
   position: relative;
   overflow: hidden;
@@ -156,8 +168,8 @@ header > video {
 }
 #about {
   width: 35%;
-  height: 50vh;
-  margin: 10vh auto;
+  height: 500px;
+  margin: 0 auto;
   align-content: center;
 }
 #logoAb {
@@ -167,6 +179,7 @@ header > video {
 #about p {
   margin-top: 50px;
   margin-bottom: 40px;
+  font-weight: 400;
 }
 #about a {
   font-size: 1.6em;
@@ -183,7 +196,10 @@ header > video {
   margin: auto;
   height: 50px;
 }
-
+#buttom:hover a{
+  background-color: transparent;
+  color:var(--color1);
+}
 #products {
   background-color: var(--color1);
   width: 90%;
@@ -205,7 +221,7 @@ header > video {
   display: flex;
   flex-flow: row nowrap;
   width: 90%;
-  height: 60vh;
+  height: 580px;
   margin: 50px;
 }
 #desarrollos figure {
@@ -287,6 +303,11 @@ header > video {
 #producti a {
   color: var(--color2);
 }
+#producti a:hover {
+  background-color: transparent;
+  color: white;
+  
+}
 #product2 > div {
   background-color: var(--color3);
 }
@@ -295,6 +316,11 @@ header > video {
 }
 #product2 a {
   color: var(--color3);
+}
+#product2 a:hover {
+  background-color: transparent;
+  color: white;
+  
 }
 #product3 > div {
   background-color: black;
@@ -305,11 +331,21 @@ header > video {
 #product3 a {
   color: black;
 }
+#product3 a:hover {
+  background-color: transparent;
+  color: white;
+  
+}
 #productf > div {
   background-color: var(--color4);
 }
 #productf a {
   color: var(--color4);
+}
+#productf a:hover {
+  background-color: transparent;
+  color: white;
+  
 }
 
 #productf:hover .pro {
@@ -382,8 +418,14 @@ header > video {
   border-radius: 10px;
   margin: 50px auto;
 }
+.sBtom:hover{
+  background-color: transparent;
+}
+.sBtom:hover a{
+  color: var(--color1);
+}
 #extras {
-  height: 40vh;
+  height: 400px;
   display: flex;
   flex-flow: row nowrap;
   width: 90%;
@@ -420,6 +462,12 @@ header > video {
   font-size: 1.8em;
   font-weight: 600;
 }
+.ingresar:hover {
+  background-color: var(--color1);
+}
+.ingresar:hover  a{
+  color: white;
+}
 #sac {
   width: 50%;
   height: 100%;
@@ -448,7 +496,7 @@ header > video {
   font-size: 3em;
 }
 #info {
-  height: 40vh;
+  height: 400px;
   display: flex;
   flex-flow: row nowrap;
   width: 90%;
@@ -546,4 +594,13 @@ footer {
 #menu-dark a:hover {
   background-color: var(--color1);
   color: white;
+}
+@media screen and (max-width: 1280px) {
+
+}
+@media screen and (max-width: 1280px) {
+
+}
+@media screen and (max-width: 1280px) {
+
 }

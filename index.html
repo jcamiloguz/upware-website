@@ -6,37 +6,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>UpwareSoft</title>
   <link rel="stylesheet" type="text/css" href="style.css" />
+  <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-  <script>
-    $(document).ready(function () {
-      var cw = $("#user1").width();
-      var cw2 = $("#user2").width();
-      $("#user1").css({
-        height: cw + "px",
-      });
-      $("#user2").css({
-        height: cw2 + "px",
-      });
-    });
 
-    $(window).resize(function () {
-      var cf = $("#user1").width();
-      var cf2 = $("#user2").width();
-      $("#user1").css({
-        height: cf + "px",
-      });
-      $("#user2").css({
-        height: cf2 + "px",
-      });
-    });
-  </script>
 </head>
 
 <body>
   <header>
+    <div id="vid">
+      <video src="videos/coding.mp4" autoplay="autoplay"></video>
+    </div>
+    <br>
     <figure id="logoW">
       <img src="img/LogoWhite.svg" alt="" />
     </figure>
@@ -72,8 +56,8 @@
         <a href="">PROGRAMAS DEPORTIVOS</a>
       </figure>
     </div>
-    <img id="background" src="img/background.png" alt="" />
-    <video src="videos/coding.mp4" autoplay></video>
+    <div id="background"></div>
+   
   </header>
 
   <section id="about">
@@ -152,7 +136,7 @@
 
   <section id="interviews">
     <h1>Testimonios</h1>
-    <div>
+    <div class="persons">
       <figure>
         <div id="user1">
           <img src="img/user-2.jpg" alt="" />
@@ -167,7 +151,7 @@
           <h3>Colegio La Presentación de Santa Marta</h3>
           <h2>Andres Fernando Guerrero</h2>
           <div class="sBtom">
-            <a class="saber" href="">Saber mas</a>
+            <a class="saber" href="">Saber más</a>
           </div>
         </article>
       </figure>
@@ -185,7 +169,7 @@
           <h3>Colegio Parroquial de San Buenaventura</h3>
           <h2>Diana Patricia Obando</h2>
           <div class="sBtom">
-            <a class="saber" href="">Saber mas</a>
+            <a class="saber" href="">Saber más</a>
           </div>
         </article>
       </figure>
@@ -212,7 +196,12 @@
     </div>
   </section>
   <div id="info">
-    <div id="map"></div>
+    <div id="map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3975.5414217558623!2d-74.06235838477416!3d4.848502196479346!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f879662bfa60d%3A0x1ea797dd6ee0d605!2sCl.%201%20%235-25%2C%20Ch%C3%ADa%2C%20Cundinamarca!5e0!3m2!1ses!2sco!4v1590072457491!5m2!1ses!2sco"
+        width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+        tabindex="0"></iframe>
+    </div>
     <div id="contact">
       <div id="data">
         <h1>Contáctanos</h1>
@@ -266,6 +255,10 @@
       <a id="navoutside2" href="">CONTACTANOS</a>
     </div>
   </footer>
+  <!-- Slick -->
+
+  <script type="text/javascript" src="slick/slick.min.js"></script>
+  <script type="text/javascript" src="app.js"></script>
 </body>
 
 </html>
