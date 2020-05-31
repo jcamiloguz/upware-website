@@ -14,15 +14,16 @@
   box-sizing: border-box;
   text-decoration: none;
 }
-#menu{
+#menu {
   position: absolute;
   width: 60px;
-	height: 60px;
-	left: 10px;
-	top: 10px;
-	cursor: pointer;
-	/*oculto*/
-	display: none;}
+  height: 60px;
+  left: 10px;
+  top: 10px;
+  cursor: pointer;
+  /*oculto*/
+  display: none;
+}
 body {
   padding: 0;
   margin: 0;
@@ -134,6 +135,7 @@ header {
   position: relative;
   overflow: hidden;
   box-shadow: 1 1px 70px gray;
+  cursor: pointer;
 }
 
 #places figure img {
@@ -145,7 +147,7 @@ header {
   height: auto;
 }
 #colegio {
-  width: 150%;
+  width: 180%;
   height: auto;
 }
 #uni {
@@ -210,12 +212,15 @@ header {
   margin: auto;
 }
 #buttom:hover a {
-  background-color: transparent;
+  box-shadow:inset 0px 0px 15px rgba(0, 0, 0, 1);
+}
+#buttom:active {
+  background-color: white;
   color: var(--color1);
 }
 #products {
   background-color: var(--color1);
-  width: 90%;
+  width: 95%;
   margin: 10px auto;
   border-radius: 20px;
   padding: 20px;
@@ -245,19 +250,21 @@ header {
 }
 #producti {
   border-bottom-left-radius: 40px;
+  background-color: var(--color2);
 }
 #productf {
   border-bottom-right-radius: 40px;
+  background-color: var(--color4);
 }
 .product > img {
   position: absolute;
   width: 250%;
-  left: -500px;
+  transform: translateX(-20%);
 }
-#product1 > img {
+#producti > img {
   position: absolute;
   width: 300%;
-  left: -500px;
+  left: -350px;
 }
 .pro {
   width: 100%;
@@ -268,6 +275,12 @@ header {
     background-color 0.5s ease;
   top: 450px;
 }
+#product2 {
+  background-color: var(--color3);
+}
+#product3 {
+  background-color: black;
+}
 #product2 .pro {
   padding: 25px 40px;
 }
@@ -277,7 +290,7 @@ header {
 #productf .pro {
   padding: 25px 40px;
 }
-.pro > h4 {
+.pro h4 {
   color: white;
   font-weight: 200;
   font-size: 1.45em;
@@ -297,7 +310,7 @@ header {
   border-radius: 10px;
   margin: 20px auto;
 }
-.pro .saber {
+.saber {
   margin-top: 50px;
 }
 .productImg {
@@ -406,7 +419,6 @@ header {
 #user2 img {
   position: absolute;
   width: 100%;
-  
 }
 #interview article {
   width: 50%;
@@ -442,7 +454,7 @@ header {
   height: 400px;
   display: flex;
   flex-flow: row nowrap;
-  width: 90%;
+  width: 95%;
   margin: 40px auto;
 }
 #sac {
@@ -517,7 +529,7 @@ header {
   height: 400px;
   display: flex;
   flex-flow: row nowrap;
-  width: 90%;
+  width: 95%;
   margin: 40px auto;
   background-color: var(--color1);
   border-radius: 15px;
@@ -538,6 +550,17 @@ header {
   margin: auto;
   margin-top: 7%;
 }
+.infodata{
+  display: flex;
+  flex-flow: row;
+  width: 150px;
+
+  margin: 0  0 0 30%;
+}
+.infodata img{
+  width: 40px;
+  padding: 0 5px;
+}
 #data h1 {
   font-weight: 400;
   font-size: 3em;
@@ -546,10 +569,11 @@ header {
   color: white;
   font-weight: 300;
   font-size: 1em;
+  text-justify: center;
 }
 #alliance {
   background-color: var(--color1);
-  width: 90%;
+  width: 95%;
   margin: auto;
   border-radius: 20px;
   padding: 20px;
@@ -568,8 +592,8 @@ header {
 #marcas {
   display: flex;
   flex-flow: row nowrap;
-  width: 90%;
-  margin: 50px;
+  width: 70%;
+  margin: 50px auto;
 }
 #marcas figure {
   width: 20%;
@@ -616,21 +640,40 @@ footer {
   background-color: var(--color1);
   color: white;
 }
+
+/*  RESPONSIVE A 1280px */
+
+
 @media screen and (max-width: 1280px) {
-}
-@media screen and (max-width: 850px) {
-}
-@media screen and (max-width: 600px) {
-  #menu{
+  #menu-light {
+    width: 100%;
+    margin-top: 80px;
+    justify-content: center;
+    display: flex;
+    flex-flow: row nowrap;
+  }
+  #menu-light a {
     display: block;
+    padding: 6px 20px;
+    color: white;
+    font-weight: 400;
+    font-size: 30px;
   }
-  #header {
+  .navinside {
+    border-left: 3px solid white;
+    border-right: 3px solid white;
   }
-  #about {
-    width: 95%;
+  #navoutside1 {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
   }
-  #products {
-    width: 95%;
+  #navoutside2 {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  #menu-light a:hover {
+    background-color: white;
+    color: var(--color1);
   }
   #products h1 {
     width: 55%;
@@ -638,7 +681,7 @@ footer {
   #desarrollos {
     display: flex;
     flex-flow: column;
-    width: 90%;
+    width: 95%;
     height: 1000px;
     margin: 50px auto;
   }
@@ -659,8 +702,15 @@ footer {
   }
   .product > img {
     position: absolute;
-    width: 150%;
-    left: -100px;
+    width: 50%;
+
+    transform: translateX(100%);
+  }
+  #producti > img {
+    position: absolute;
+    width: 50%;
+    left: 0;
+    transform: translateX(100%);
   }
 
   .pro {
@@ -672,24 +722,38 @@ footer {
     flex-flow: row-reverse;
     left: -50%;
   }
-
-  .pro > h4 {
-    display: none;
+  .infopro {
+    padding: 0 10px;
+    width: 50%;
+  }
+  .pro h4 {
+    font-size: 1.2em;
+    margin-top: 5px;
   }
   .product:hover .pro {
     left: 0;
   }
-  .pro .saber {
-    margin-top: 70px;
-    margin-right: 20px;
+  .saber {
+    margin-top: 20px;
+    
   }
 
-  #productf .pro .saber {
-    margin-top: 75px;
-    margin-right: 20px;
+
+  #producti  .productImg {
+    width: 40%;
+    margin: 7% 5%;
   }
-  .productImg {
-    width: 100%;
+  #product2  .productImg {
+    width: 40%;
+    margin: 3.5% 5%;
+  }
+  #product3  .productImg {
+    width: 40%;
+    margin: 7% 5%;
+  }
+  #productf  .productImg {
+    width: 40%;
+    margin: 3.5% 5%;
   }
   #product2 .pro {
     padding: 35px 10px;
@@ -699,6 +763,85 @@ footer {
   }
   #productf .pro {
     padding: 35px 10px;
+  }
+  #menu-dark {
+    display: none;
+  }
+  #extras {
+    display: flex;
+    width: 95%;
+    margin: 40px auto;
+  }
+
+  #pse {
+    width: 100%;
+    height: 85%;
+  }
+  #pse figure {
+    width: 60%;
+  }
+  #sac {
+    width: 100%;
+    height: 85%;
+  }
+
+  #sac > img {
+    width: 180%;
+    transform: translateX(-20%);
+  }
+  #sac figure {
+    position: relative;
+    top: 50%;
+    width: 85%;
+    margin: 0 auto;
+  }
+  #sac figure h1 {
+    font-size: 2.4em;
+  }
+  #menu-light a{
+    font-size: 1.1em;
+  }
+}
+
+/*  RESPONSIVE A 900px */
+
+@media screen and (max-width: 900px) {
+  .pro h4 {
+    display: none;
+  }
+  .product > img {
+    width: 100%;
+    left: 0px;
+    transform: translateX(0);
+  }
+  header {
+  height: auto;
+  }
+  #background{
+    height: 85vh;
+  }
+  #vid {
+    width: 100vw;
+    height: 85vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    overflow: hidden;
+  }
+  #vid video {
+    position: absolute;
+  }
+  #places{
+    position: static;
+    margin-top: 40px;
+    margin-bottom: 150px;
+  }
+  #producti > img {
+    width: 115%;
+    left: 0px;
+    transform: translateX(0);
+    top: -50px;
   }
   #interviews {
     width: 95%;
@@ -717,38 +860,135 @@ footer {
   #user2 {
     margin: 20px auto;
   }
+  #about {
+    width: 95%;
+  }
+  #info {
+    width: 95%;
+  }
+  #about p {
+    width: 95%;
+  }
+  .saber {
 
-  #extras {
-    height: 700px;
+    margin: 80px auto;
+  }
+  #data h1{
+    font-size: 1.8em;
+  }
+  #alliance {
+    width: 95%;
+  }
+  #alliance h1 {
+    color: white;
+    font-weight: 600;
+    border-bottom: 2px solid white;
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    font-size: 3em;
+    padding-top: 15px;
+  }
+  #marcas {
     display: flex;
     flex-flow: column;
+    width: 30%;
+    margin: auto;
+  }
+  #marcas figure {
+    width: 100%;
+    margin: 20px 0;
+  }
+  #marcas figure img {
+    width: 100%;
+  }
+  
+  #menu-light a {
+    display: block;
+    padding: 6px 20px;
+    color: white;
+    font-weight: 400;
+    font-size: 30px;
+    border-right: 3px solid white;
+  }
+  .navinside {
+    border-left: none;
+   
+  }
+  #navoutside1 {
+    border-left: none;
+    border-left: none;
+  }
+  #navoutside1 {
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+  }
+  #navoutside2 {
+    border-top-right-radius: 0px; 
+    border-bottom-right-radius: 0px;
+  }
+  #menu-light a:hover {
+    background-color: white;
+    border-right: 3px solid var(--color1);
+    color: var(--color1);
+  }
+  #menu {
+    display: block;
+  }
+}
+/*  RESPONSIVE A 600px */
+
+@media screen and (max-width: 600px) {
+  
+  
+  #about {
     width: 95%;
+  }
+  #about p {
+    width: 95%;
+  }
+  #products {
+    width: 95%;
+  }
+  #extras {
+    display: flex;
+    width: 95%;
+    height: 700px;
     margin: 40px auto;
+    flex-flow: column;
   }
 
   #pse {
     width: 100%;
-    height: 50%;
-    margin: 10px 0;
+    height: 85%;
+    margin: 20px 0;
   }
-
+  #pse figure {
+    width: 70%;
+  }
   #sac {
     width: 100%;
-    height: 50%;
+    height: 85%;
   }
 
+  #sac > img {
+    width: 100%;
+    transform: translateX(0);
+  }
   #sac figure {
     position: relative;
     top: 50%;
-    width: 80%;
+    width: 70%;
     margin: 0 auto;
   }
   #sac figure h1 {
-    font-size: 3em;
+    font-size: 2.4em;
   }
+
   #info {
     height: 600px;
     flex-flow: column;
+    width: 95%;
   }
   #map {
     width: 100%;
@@ -763,35 +1003,5 @@ footer {
   }
   #data h1 {
     font-size: 2.6em;
-  }
-  #alliance {
-    width: 95%;
-  }
-  #alliance h1 {
-    color: white;
-    font-weight: 600;
-    border-bottom: 2px solid white;
-    width: 50%;
-    margin: auto;
-    text-align: center;
-    font-size: 3em;
-    padding-top: 40px;
-  }
-  #marcas {
-    display: flex;
-    flex-flow: row nowrap;
-    width: 90%;
-    margin: 50px;
-  }
-  #marcas figure {
-    width: 20%;
-    margin: 20px;
-  }
-  #marcas figure img {
-    width: 100%;
-  }
-  #menu-light {
-  display: none;
-  flex-flow: column;
   }
 }

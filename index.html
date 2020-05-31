@@ -19,21 +19,23 @@
   <header>
     <img id="menu" src="img/menu.svg" alt="">
     <div id="vid">
-      <video src="videos/coding.mp4" autoplay="autoplay"></video>
+      <video autoplay loop>
+        <source src="videos/coding.mp4" type="video/mp4">
+      </video>
     </div>
     <br>
     <figure id="logoW">
       <img src="img/LogoWhite.svg" alt="" />
     </figure>
     <nav id="menu-light">
-      <a id="navoutside1" href="">NUESTRA EMPRESA</a>
+      <a id="navoutside1" href="#about">NUESTRA EMPRESA</a>
 
-      <a class="navinside" href="">SAC</a>
+      <a class="navinside" href="#extras">SAC</a>
 
-      <a href="">DESARROLLOS</a>
+      <a href="#products">DESARROLLOS</a>
 
-      <a class="navinside" href="">NUESTRA RAZON DE SER</a>
-      <a id="navoutside2" href="">CONTACTANOS</a>
+      <a class="navinside" href="#about">NUESTRA RAZON DE SER</a>
+      <a id="navoutside2" href="#info">CONTACTANOS</a>
     </nav>
     <div id="places">
       <figure>
@@ -85,10 +87,12 @@
           <div class="productImg">
             <img src="img/product1.svg" alt="Schoolpack" />
           </div>
-          <h4>La solución tecnológica para gestionar jardines y colegios School Pack es el software más completo y
-            robusto del mercado.</h4>
-          <div class="saber">
-            <a href="">Saber más</a>
+          <div class="infopro">
+            <h4>La solución tecnológica para gestionar jardines y colegios School Pack es el software más completo y
+              robusto del mercado.</h4>
+            <div class="saber">
+              <a href="">Saber más</a>
+            </div>
           </div>
         </div>
       </figure>
@@ -98,10 +102,12 @@
           <div class="productImg">
             <img src="img/product2.svg" alt="Campuspack" />
           </div>
-          <h4>El software especializado para educación tecnológica y superior. Con amplia capacidad de
-            adaptación a diferentes características académicas.</h4>
-          <div class="saber">
-            <a href="">Saber más</a>
+          <div class="infopro">
+            <h4>El software especializado para educación tecnológica y superior. Con amplia capacidad de
+              adaptación a diferentes características académicas.</h4>
+            <div class="saber">
+              <a href="">Saber más</a>
+            </div>
           </div>
         </div>
       </figure>
@@ -111,10 +117,12 @@
           <div class="productImg">
             <img src="img/product3.svg" alt="Sportarchitec" />
           </div>
-          <h4>El software más completo para gestión de instituciones deportivas. Con el fin de brindar una herramienta
-            que permita mejorar la gestión y control de escenarios deportivos.</h4>
-          <div class="saber">
-            <a href="">Saber más</a>
+          <div class="infopro">
+            <h4>El software más completo para gestión de instituciones deportivas. Con el fin de brindar una herramienta
+              que permita mejorar la gestión y control de escenarios deportivos.</h4>
+            <div class="saber">
+              <a href="">Saber más</a>
+            </div>
           </div>
         </div>
       </figure>
@@ -124,12 +132,13 @@
           <div class="productImg">
             <img src="img/product4.svg" alt="LearningFactory" />
           </div>
-          <h4>Programas virtuales a la vanguardia. Logramos combinar el conocimiento de un equipo
-            multidisciplinario de expertos en tecnología y virtualidad.</h4>
-          <div class="saber">
-            <a href="">Saber más</a>
+          <div class="infopro">
+            <h4>Programas virtuales a la vanguardia. Logramos combinar el conocimiento de un equipo
+              multidisciplinario de expertos en tecnología y virtualidad.</h4>
+            <div class="saber">
+              <a href="">Saber más</a>
+            </div>
           </div>
-
         </div>
       </figure>
     </div>
@@ -204,17 +213,26 @@
     <div id="contact">
       <div id="data">
         <h1>Contáctanos</h1>
-        <span class="material-icons">location_on</span>
-        <p> Calle 1 No.5-25 La Balsa, Chia(Cundinamarca)-Colombia</p>
         <br>
-        <span class="material-icons">local_phone</span>
-        <p> Telefonos: 00571-8614387 8614367</p>
+        <div class="infodata">
+          <span class="material-icons">location_on</span>
+          <p> Calle 1 No.5-25, Chia-Colombia</p>
+        </div>
         <br>
-        <span class="material-icons"></span>
-        <p> Upware Soft</p>
+        <div class="infodata">
+          <span class="material-icons">local_phone</span>
+          <p> Telefonos: 00571-8614387</p>
+        </div>
         <br>
-        <span class="material-icons"></span>
-        <p> @upwaresoft</p>
+        <div class="infodata">
+          <img src="img/facebook.svg" alt="">
+          <p>Upware Soft</p>
+        </div>
+        <br>
+        <div class="infodata">
+          <img src="img/twitter.svg" alt="">
+          <p>@upwaresoft</p>
+        </div>
       </div>
     </div>
   </div>

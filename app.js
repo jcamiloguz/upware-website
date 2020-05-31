@@ -1,21 +1,11 @@
 $(document).ready(function () {
-// Boton Menu
-$("#menu").click(function () {
-  var visible = $("#menu-light").data("view");
-
-  if (visible == false) {
-    //$("#menu-header").css("right", 0);
-    $("#menu-light").animate({ right: 0 }, 500);
-    $("#menu-light").data("view", true);
+  var ventana = $(window).width();
+  var visible = $("#menu-light").css("display");
+  var flex = $("#menu-light").css("flex-flow");
+  if (ventana < 900 && flex == "row nowrap") {
+    $("#menu-light").css("flex-flow", "column");
+    $("#menu-light").css("display", "none");
   }
-
-  if (visible == true) {
-    //$("#menu-header").css("right", 100 + "vh");
-    $("#menu-light").animate({ right: 100 + "vh" }, 500);
-    $("#menu-light").data("view", false);
-  }
-});
-
   var cw = $("#user1").width();
   var cw2 = $("#user2").width();
   $("#user1").css({
@@ -42,7 +32,7 @@ $("#menu").click(function () {
         },
       },
       {
-        breakpoint: 800,
+        breakpoint: 1000,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
@@ -69,7 +59,7 @@ $("#menu").click(function () {
     autoplaySpeed: 2000,
     responsive: [
       {
-        breakpoint: 1200,
+        breakpoint: 1600,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -89,25 +79,36 @@ function resizeLogo() {
   setTimeout(function () {
     $width1 = $("#user1").width();
     $width2 = $("#user2").width();
+    $width = $(window).width();
     $("#user1").css("height", $width1);
     $("#user2").css("height", $width2);
   }, 100);
 }
 
+$(window).ready(function () {
+  $("#menu").click(function () {
+    var visible = $("#menu-light").css("display");
+    if (visible == "none") {
+      //$("#menu-header").css("right", 0);
+      $("#menu-light").css("display", "flex");
+    }
 
-$(document).ready(function () {
-  
+    if (visible == "flex") {
+      //$("#menu-header").css("right", 100 + "vh");
+      $("#menu-light").css("display", "none");
+    }
+  });
 });
-
 $(window).resize(function () {
   var ventana = $(window).width();
-
-  if (ventana > 600) {
-    $("#menu-header").css("right", 0);
-    $("#menu-header").data("view", false);
+  var visible = $("#menu-light").css("display");
+  var flex = $("#menu-light").css("flex-flow");
+  if (ventana > 900) {
+    $("#menu-light").css("display", "flex");
+    $("#menu-light").css("flex-flow", "row nowrap");
   }
-  if (ventana <= 600) {
-    $("#menu-header").css("right", 100 + "vh");
-    $("#menu-header").data("view", false);
+  if (ventana < 900 && flex == "row nowrap") {
+    $("#menu-light").css("flex-flow", "column");
+    $("#menu-light").css("display", "none");
   }
 });
